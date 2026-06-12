@@ -1,38 +1,42 @@
-# AlvinaWORLD
+# ALVINA World
 
-AlvinaWORLD is the global ecosystem for beauty, wellness, lifestyle and human-centered artificial intelligence experiences.
+The public gateway to the ALVINA human-centered universe — a premium digital experience for personal intelligence, wellbeing, growth, and meaningful connection.
 
-Developed by TVK Group and TVK Labs, AlvinaWORLD combines technology, wellness, digital experiences, intelligent services and future lifestyle innovation into a unified ecosystem.
+## Overview
 
-## Vision
+ALVINA World is the umbrella brand for ALVINA experiences, including:
 
-To create a global platform where beauty, wellness, personal growth and AI-powered assistance converge to improve quality of life.
-
-## Ecosystem
-
-AlvinaWORLD includes:
-
-- ALVINA
-- AlvinaFlow
-- Ava Sentient
-- Ava Santé
-- TVK Labs
-- TVK Group
-
-## Areas
-
-- Beauty
-- Wellness
-- Lifestyle
-- AI Assistants
-- Personal Experience Systems
-- Digital Services
-- Future Human-Centered Technologies
+- ALVINA Personal AI Companion
+- ALVINA Flow
+- Wellbeing journeys
+- Personal growth and life organization
+- Family connection and human-centered AI
 
 ## Website
 
-https://www.alvinaworld.com
+Live at [alvinaworld.com](https://www.alvinaworld.com)
 
-## Status
+## Local Development
 
-Official ecosystem website and global platform.
+Serve the static site with any HTTP server:
+
+```bash
+python3 -m http.server 8080
+```
+
+Open `http://localhost:8080`
+
+## Structure
+
+- `index.html` — Main landing page with 10 sections
+- `styles.css` — Premium wellness design system and animations
+- `app.js` — Interactions, scroll reveals, mobile navigation
+- `i18n.js` — 25-language translation support
+
+## Deployment
+
+Configured for Vercel via `vercel.json`. Deploy by pushing to the main branch or connecting the repository to Vercel.
+
+## Languages
+
+English, Deutsch, Français, Español, Italiano, Português, Nederlands, Русский, 中文, 日本語, 한국어, العربية, हिन्दी, Türkçe, Polski, Svenska, Norsk, Dansk, Suomi, Ελληνικά, Čeština, Magyar, Română, Українська, Bahasa Indonesia

@@ -2,83 +2,484 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Alvina World – Family Wellness</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    .hero-container {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-    }
-    .hero-container img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-    .hero-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: rgba(51, 65, 85, 0.5);
-      color: white;
-      padding: 2rem;
-      border-radius: 1rem;
-      text-align: center;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ALVINA World — A human-centered AI universe for life, growth, wellbeing and connection." />
+  <title>ALVINA World — Human-Centered AI Universe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="bg-blue-50 font-sans text-gray-800">
-  <header class="bg-white shadow px-6 py-4 flex justify-between items-center">
-    <h1 class="text-xl font-bold text-blue-800">Alvina World</h1>
-    <select onchange="location = this.value;" class="border text-sm text-blue-700 border-blue-300 px-2 py-1 rounded">
-      <option value="index.html">English</option>
-      <option value="lang/de.html">Deutsch</option>
-      <option value="lang/ru.html">Русский</option>
-    </select>
+<body>
+  <div class="ambient-particles" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a href="#top" class="logo" aria-label="ALVINA World home">
+        <span class="logo-mark"></span>
+        <span class="logo-text">ALVINA World</span>
+      </a>
+      <nav class="nav-desktop" aria-label="Main navigation">
+        <a href="#world" data-i18n="nav.world">The World</a>
+        <a href="#companion" data-i18n="nav.companion">Companion</a>
+        <a href="#flow" data-i18n="nav.flow">Flow</a>
+        <a href="#life-areas" data-i18n="nav.life">Life Areas</a>
+        <a href="#contact" data-i18n="nav.join">Join</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-select-wrap">
+          <label for="lang-select" class="sr-only" data-i18n="lang.label">Language</label>
+          <select id="lang-select" class="lang-select" aria-label="Select language">
+            <option value="en">English</option>
+            <option value="de">Deutsch</option>
+            <option value="fr">Français</option>
+            <option value="es">Español</option>
+            <option value="it">Italiano</option>
+            <option value="pt">Português</option>
+            <option value="nl">Nederlands</option>
+            <option value="ru">Русский</option>
+            <option value="zh">中文</option>
+            <option value="ja">日本語</option>
+            <option value="ko">한국어</option>
+            <option value="ar">العربية</option>
+            <option value="hi">हिन्दी</option>
+            <option value="tr">Türkçe</option>
+            <option value="pl">Polski</option>
+            <option value="sv">Svenska</option>
+            <option value="no">Norsk</option>
+            <option value="da">Dansk</option>
+            <option value="fi">Suomi</option>
+            <option value="el">Ελληνικά</option>
+            <option value="cs">Čeština</option>
+            <option value="hu">Magyar</option>
+            <option value="ro">Română</option>
+            <option value="uk">Українська</option>
+            <option value="id">Bahasa Indonesia</option>
+          </select>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="nav-mobile" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="#world" data-i18n="nav.world">The World</a>
+      <a href="#companion" data-i18n="nav.companion">Companion</a>
+      <a href="#flow" data-i18n="nav.flow">Flow</a>
+      <a href="#life-areas" data-i18n="nav.life">Life Areas</a>
+      <a href="#intelligence" data-i18n="nav.intelligence">Intelligence</a>
+      <a href="#wellbeing" data-i18n="nav.wellbeing">Wellbeing</a>
+      <a href="#family" data-i18n="nav.family">Family</a>
+      <a href="#experience" data-i18n="nav.experience">Experience</a>
+      <a href="#contact" data-i18n="nav.join">Join</a>
+    </nav>
   </header>
 
-  <section class="hero-container">
-    <img src="alvina-hero.png" alt="Alvina World Banner"/>
-    <div class="hero-text">
-      <h2 class="text-3xl md:text-5xl font-bold mb-4">A World of Calm for You and Your Child</h2>
-      <p class="text-lg mb-4">Gentle rituals, printable fun, and emotional connection through Alvina.</p>
-      <a href="#resources" class="bg-white text-blue-900 font-semibold px-6 py-2 rounded hover:bg-blue-100">Explore Family Tools</a>
+  <main>
+    <!-- 1. Hero -->
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <div class="hero-glow hero-glow--rose"></div>
+        <div class="hero-glow hero-glow--lavender"></div>
+        <div class="hero-glow hero-glow--blue"></div>
+        <div class="hero-wave"></div>
+      </div>
+      <div class="container hero-content reveal">
+        <p class="eyebrow" data-i18n="hero.eyebrow">The human side of intelligent living</p>
+        <h1 class="hero-title" data-i18n="hero.title">ALVINA World</h1>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">A Human-Centered AI Universe for Life, Growth, Wellbeing and Connection.</p>
+        <p class="hero-support" data-i18n="hero.support">ALVINA World brings together personal intelligence, wellbeing practices, emotional clarity, daily organization, learning, and meaningful human connection in one elegant digital experience.</p>
+        <div class="hero-actions">
+          <a href="#world" class="btn btn-primary" data-i18n="hero.btn.explore">Explore ALVINA</a>
+          <a href="#flow" class="btn btn-secondary" data-i18n="hero.btn.flow">Discover ALVINA Flow</a>
+          <a href="#contact" class="btn btn-ghost" data-i18n="hero.btn.join">Join the World</a>
+        </div>
+      </div>
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span class="scroll-line"></span>
+      </div>
+    </section>
+
+    <!-- 2. The ALVINA World -->
+    <section class="section section-world" id="world">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" data-i18n="world.tag">The Universe</span>
+          <h2 data-i18n="world.title">The ALVINA World</h2>
+          <p class="section-lead" data-i18n="world.lead">A beautiful, safe, intelligent world designed around human life — where personal growth, emotional clarity, and meaningful connection orbit together in harmony.</p>
+        </div>
+
+        <div class="world-visual reveal">
+          <div class="orbit-scene" id="orbit-scene" aria-label="ALVINA World visualization">
+            <div class="orbit-ring orbit-ring--1"></div>
+            <div class="orbit-ring orbit-ring--2"></div>
+            <div class="orbit-ring orbit-ring--3"></div>
+            <div class="orbit-center">
+              <div class="orbit-core">
+                <span data-i18n="world.core">ALVINA</span>
+              </div>
+            </div>
+            <div class="orbit-satellites">
+              <div class="satellite" data-orbit="1"><span data-i18n="orbit.personal">Personal AI</span></div>
+              <div class="satellite" data-orbit="2"><span data-i18n="orbit.flow">Flow</span></div>
+              <div class="satellite" data-orbit="3"><span data-i18n="orbit.wellbeing">Wellbeing</span></div>
+              <div class="satellite" data-orbit="4"><span data-i18n="orbit.growth">Growth</span></div>
+              <div class="satellite" data-orbit="5"><span data-i18n="orbit.learning">Learning</span></div>
+              <div class="satellite" data-orbit="6"><span data-i18n="orbit.family">Family</span></div>
+              <div class="satellite" data-orbit="7"><span data-i18n="orbit.reflection">Reflection</span></div>
+              <div class="satellite" data-orbit="8"><span data-i18n="orbit.daily">Daily Life</span></div>
+            </div>
+          </div>
+          <div class="orbit-cards-mobile" id="orbit-cards-mobile" aria-hidden="true"></div>
+        </div>
+
+        <div class="world-pillars reveal">
+          <div class="pillar-card">
+            <div class="pillar-icon">&#10022;</div>
+            <h3 data-i18n="world.pillar1.title">Personal Intelligence</h3>
+            <p data-i18n="world.pillar1.text">Supportive AI that understands your rhythm, priorities, and inner world.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">&#10047;</div>
+            <h3 data-i18n="world.pillar2.title">Wellbeing &amp; Growth</h3>
+            <p data-i18n="world.pillar2.text">Gentle practices for emotional clarity, reflection, and personal evolution.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">&#10084;</div>
+            <h3 data-i18n="world.pillar3.title">Human Connection</h3>
+            <p data-i18n="world.pillar3.text">Spaces for family bonding, shared rituals, and meaningful relationships.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Personal AI Companion -->
+    <section class="section section-companion" id="companion">
+      <div class="container">
+        <div class="split-layout">
+          <div class="split-content reveal">
+            <span class="section-tag" data-i18n="companion.tag">Personal AI</span>
+            <h2 data-i18n="companion.title">Personal AI Companion</h2>
+            <p class="section-lead" data-i18n="companion.lead">A supportive intelligence companion for everyday life — present when you need clarity, gentle guidance, or a thoughtful partner in your daily journey.</p>
+            <ul class="capability-list">
+              <li data-i18n="companion.cap1">Understand your needs</li>
+              <li data-i18n="companion.cap2">Help organize your thoughts</li>
+              <li data-i18n="companion.cap3">Support goals and routines</li>
+              <li data-i18n="companion.cap4">Offer guidance</li>
+              <li data-i18n="companion.cap5">Help with reflection</li>
+              <li data-i18n="companion.cap6">Assist with planning</li>
+            </ul>
+            <p class="disclaimer" data-i18n="companion.disclaimer">ALVINA is a supportive companion — not a medical, therapeutic, or diagnostic service.</p>
+          </div>
+          <div class="split-visual reveal">
+            <div class="companion-visual">
+              <div class="companion-aura"></div>
+              <div class="companion-card">
+                <div class="companion-pulse"></div>
+                <p class="companion-greeting" data-i18n="companion.greeting">Good morning. How can I support your day?</p>
+                <div class="companion-chips">
+                  <span data-i18n="companion.chip1">Plan my day</span>
+                  <span data-i18n="companion.chip2">Reflect</span>
+                  <span data-i18n="companion.chip3">Organize thoughts</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. ALVINA Flow -->
+    <section class="section section-flow" id="flow">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" data-i18n="flow.tag">ALVINA Flow</span>
+          <h2 data-i18n="flow.title">ALVINA Flow</h2>
+          <p class="section-lead" data-i18n="flow.lead">A gentle practice of breath, movement, ritual, and connection — designed to restore balance and nurture inner strength.</p>
+        </div>
+        <div class="flow-grid reveal">
+          <article class="flow-card">
+            <div class="flow-card-icon breath-icon"></div>
+            <h3 data-i18n="flow.breath.title">Breath</h3>
+            <p data-i18n="flow.breath.text">Calming breathwork rituals that anchor you in the present moment.</p>
+          </article>
+          <article class="flow-card">
+            <div class="flow-card-icon movement-icon"></div>
+            <h3 data-i18n="flow.movement.title">Movement</h3>
+            <p data-i18n="flow.movement.text">Gentle movement practices that honor your body and energy.</p>
+          </article>
+          <article class="flow-card">
+            <div class="flow-card-icon reflection-icon"></div>
+            <h3 data-i18n="flow.reflection.title">Reflection</h3>
+            <p data-i18n="flow.reflection.text">Quiet moments of introspection and emotional awareness.</p>
+          </article>
+          <article class="flow-card">
+            <div class="flow-card-icon bonding-icon"></div>
+            <h3 data-i18n="flow.bonding.title">Mother &amp; Child Bonding</h3>
+            <p data-i18n="flow.bonding.text">Shared rituals that deepen the sacred connection between parent and child.</p>
+          </article>
+          <article class="flow-card">
+            <div class="flow-card-icon strength-icon"></div>
+            <h3 data-i18n="flow.strength.title">Feminine Strength</h3>
+            <p data-i18n="flow.strength.text">Practices that celebrate resilience, grace, and inner power.</p>
+          </article>
+          <article class="flow-card">
+            <div class="flow-card-icon balance-icon"></div>
+            <h3 data-i18n="flow.balance.title">Emotional Balance</h3>
+            <p data-i18n="flow.balance.text">Tools for navigating emotions with compassion and clarity.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Life Areas -->
+    <section class="section section-life" id="life-areas">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" data-i18n="life.tag">Life Areas</span>
+          <h2 data-i18n="life.title">Where ALVINA Supports Your Life</h2>
+          <p class="section-lead" data-i18n="life.lead">From daily organization to creative expression — ALVINA gently weaves intelligence into the fabric of your everyday experience.</p>
+        </div>
+        <div class="life-grid reveal">
+          <article class="life-card" data-life="organization">
+            <div class="life-card-glow"></div>
+            <h3 data-i18n="life.org">Daily organization</h3>
+          </article>
+          <article class="life-card" data-life="goals">
+            <div class="life-card-glow"></div>
+            <h3 data-i18n="life.goals">Personal goals</h3>
+          </article>
+          <article class="life-card" data-life="clarity">
+            <div class="life-card-glow"></div>
+            <h3 data-i18n="life.clarity">Emotional clarity</h3>
+          </article>
+          <article class="life-card" data-life="learning">
+            <div class="life-card-glow"></div>
+            <h3 data-i18n="life.learning">Learning</h3>
+          </article>
+          <article class="life-card" data-life="wellbeing">
+            <div class="life-card-glow"></div>
+            <h3 data-i18n="life.wellbeing">Wellbeing</h3>
+          </article>
+          <article class="life-card" data-life="family">
+            <div class="life-card-glow"></div>
+            <h3 data-i18n="life.family">Family connection</h3>
+          </article>
+          <article class="life-card" data-life="reflection">
+            <div class="life-card-glow"></div>
+            <h3 data-i18n="life.reflection">Reflection</h3>
+          </article>
+          <article class="life-card" data-life="habits">
+            <div class="life-card-glow"></div>
+            <h3 data-i18n="life.habits">Habits</h3>
+          </article>
+          <article class="life-card" data-life="creativity">
+            <div class="life-card-glow"></div>
+            <h3 data-i18n="life.creativity">Creativity</h3>
+          </article>
+          <article class="life-card" data-life="planning">
+            <div class="life-card-glow"></div>
+            <h3 data-i18n="life.planning">Life planning</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Human-Centered Intelligence -->
+    <section class="section section-intelligence" id="intelligence">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" data-i18n="intel.tag">Intelligence</span>
+          <h2 data-i18n="intel.title">Human-Centered Intelligence</h2>
+          <p class="section-lead" data-i18n="intel.lead">ALVINA doesn't rush to answer. It listens, understands, and supports — guiding you toward growth with warmth and respect.</p>
+        </div>
+        <div class="intel-flow reveal">
+          <div class="intel-step" data-step="1">
+            <div class="intel-node">
+              <span class="intel-num">01</span>
+              <span class="intel-label" data-i18n="intel.listen">Listen</span>
+            </div>
+          </div>
+          <div class="intel-connector"><div class="intel-path"></div></div>
+          <div class="intel-step" data-step="2">
+            <div class="intel-node">
+              <span class="intel-num">02</span>
+              <span class="intel-label" data-i18n="intel.understand">Understand</span>
+            </div>
+          </div>
+          <div class="intel-connector"><div class="intel-path"></div></div>
+          <div class="intel-step" data-step="3">
+            <div class="intel-node">
+              <span class="intel-num">03</span>
+              <span class="intel-label" data-i18n="intel.support">Support</span>
+            </div>
+          </div>
+          <div class="intel-connector"><div class="intel-path"></div></div>
+          <div class="intel-step" data-step="4">
+            <div class="intel-node">
+              <span class="intel-num">04</span>
+              <span class="intel-label" data-i18n="intel.guide">Guide</span>
+            </div>
+          </div>
+          <div class="intel-connector"><div class="intel-path"></div></div>
+          <div class="intel-step" data-step="5">
+            <div class="intel-node intel-node--final">
+              <span class="intel-num">05</span>
+              <span class="intel-label" data-i18n="intel.grow">Grow</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Wellbeing & Growth -->
+    <section class="section section-wellbeing" id="wellbeing">
+      <div class="container">
+        <div class="split-layout split-layout--reverse">
+          <div class="split-visual reveal">
+            <div class="wellbeing-visual">
+              <div class="wellbeing-rings">
+                <div class="wellbeing-ring"></div>
+                <div class="wellbeing-ring"></div>
+                <div class="wellbeing-ring"></div>
+              </div>
+              <div class="wellbeing-center">
+                <span data-i18n="wellbeing.center">Inner Balance</span>
+              </div>
+            </div>
+          </div>
+          <div class="split-content reveal">
+            <span class="section-tag" data-i18n="wellbeing.tag">Wellbeing</span>
+            <h2 data-i18n="wellbeing.title">Wellbeing &amp; Growth</h2>
+            <p class="section-lead" data-i18n="wellbeing.lead">Nurture your emotional landscape with practices designed for real life — not perfection, but gentle, consistent progress toward a more centered you.</p>
+            <div class="wellbeing-features">
+              <div class="wellbeing-feature">
+                <h4 data-i18n="wellbeing.f1.title">Mindful Moments</h4>
+                <p data-i18n="wellbeing.f1.text">Short, accessible practices that fit into your busiest days.</p>
+              </div>
+              <div class="wellbeing-feature">
+                <h4 data-i18n="wellbeing.f2.title">Emotional Awareness</h4>
+                <p data-i18n="wellbeing.f2.text">Tools to name, understand, and navigate your feelings with compassion.</p>
+              </div>
+              <div class="wellbeing-feature">
+                <h4 data-i18n="wellbeing.f3.title">Personal Growth Paths</h4>
+                <p data-i18n="wellbeing.f3.text">Guided journeys that evolve with you — at your own pace.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Family & Connection -->
+    <section class="section section-family" id="family">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" data-i18n="family.tag">Connection</span>
+          <h2 data-i18n="family.title">Family &amp; Connection</h2>
+          <p class="section-lead" data-i18n="family.lead">Technology that brings people closer — shared rituals, family planning, and moments of togetherness woven into daily life.</p>
+        </div>
+        <div class="family-grid reveal">
+          <article class="family-card">
+            <div class="family-card-image family-card-image--1"></div>
+            <div class="family-card-body">
+              <h3 data-i18n="family.c1.title">Shared Rituals</h3>
+              <p data-i18n="family.c1.text">Morning routines, bedtime stories, and family check-ins that create lasting bonds.</p>
+            </div>
+          </article>
+          <article class="family-card">
+            <div class="family-card-image family-card-image--2"></div>
+            <div class="family-card-body">
+              <h3 data-i18n="family.c2.title">Parent &amp; Child</h3>
+              <p data-i18n="family.c2.text">Gentle guidance for mothers and fathers navigating the beautiful complexity of parenthood.</p>
+            </div>
+          </article>
+          <article class="family-card">
+            <div class="family-card-image family-card-image--3"></div>
+            <div class="family-card-body">
+              <h3 data-i18n="family.c3.title">Together at Home</h3>
+              <p data-i18n="family.c3.text">Activities, conversations, and planning tools that make home a sanctuary of connection.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. The ALVINA Experience -->
+    <section class="section section-experience" id="experience">
+      <div class="container">
+        <div class="experience-panel reveal">
+          <span class="section-tag" data-i18n="exp.tag">The Experience</span>
+          <h2 data-i18n="exp.title">The ALVINA Experience</h2>
+          <p class="section-lead" data-i18n="exp.lead">Every interaction is designed to feel calm, beautiful, and deeply human. ALVINA World is not a dashboard — it is a living space you return to with ease.</p>
+          <div class="experience-qualities">
+            <div class="quality">
+              <span class="quality-dot"></span>
+              <span data-i18n="exp.q1">Calm by design</span>
+            </div>
+            <div class="quality">
+              <span class="quality-dot"></span>
+              <span data-i18n="exp.q2">Elegantly simple</span>
+            </div>
+            <div class="quality">
+              <span class="quality-dot"></span>
+              <span data-i18n="exp.q3">Warmly intelligent</span>
+            </div>
+            <div class="quality">
+              <span class="quality-dot"></span>
+              <span data-i18n="exp.q4">Respectfully personal</span>
+            </div>
+            <div class="quality">
+              <span class="quality-dot"></span>
+              <span data-i18n="exp.q5">Beautifully alive</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Early Access / Contact -->
+    <section class="section section-contact" id="contact">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <div class="contact-content">
+            <span class="section-tag" data-i18n="contact.tag">Early Access</span>
+            <h2 data-i18n="contact.title">Join the World</h2>
+            <p class="section-lead" data-i18n="contact.lead">Be among the first to experience ALVINA World. Share your email and we'll welcome you when the universe opens.</p>
+          </div>
+          <form class="contact-form" action="https://formsubmit.co/hello@alvina.app" method="POST">
+            <div class="form-row">
+              <input type="text" name="name" id="contact-name" data-i18n-placeholder="contact.name" placeholder="Your name" required />
+              <input type="email" name="email" id="contact-email" data-i18n-placeholder="contact.email" placeholder="Your email" required />
+            </div>
+            <textarea name="message" id="contact-message" rows="3" data-i18n-placeholder="contact.message" placeholder="Tell us what you're looking forward to..."></textarea>
+            <button type="submit" class="btn btn-primary btn-full" data-i18n="contact.submit">Request Early Access</button>
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_subject" value="ALVINA World — Early Access Request" />
+            <input type="hidden" name="_template" value="table" />
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-text">ALVINA World</span>
+        <p data-i18n="footer.tagline">A human-centered AI universe for life, growth, wellbeing and connection.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#world" data-i18n="nav.world">The World</a>
+        <a href="#companion" data-i18n="nav.companion">Companion</a>
+        <a href="#flow" data-i18n="nav.flow">Flow</a>
+        <a href="#contact" data-i18n="nav.join">Join</a>
+      </div>
+      <p class="footer-copy">&copy; <span id="year"></span> ALVINA World</p>
     </div>
-  </section>
-
-  <section id="resources" class="bg-blue-100 px-6 py-12 text-center">
-    <h3 class="text-2xl font-bold text-blue-900">Wellness Resources for All Ages</h3>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
-      <div class="bg-white p-6 rounded shadow text-left">
-        <h4 class="text-xl font-semibold text-blue-700">🧒 Children’s Yoga Corner</h4>
-        <p class="mt-2 text-blue-600">Simple poses, calming videos, printable games and songs.</p>
-      </div>
-      <div class="bg-white p-6 rounded shadow text-left">
-        <h4 class="text-xl font-semibold text-blue-700">💗 Parent Stories</h4>
-        <p class="mt-2 text-blue-600">Real journeys from mothers & fathers creating balance at home.</p>
-      </div>
-      <div class="bg-white p-6 rounded shadow text-left">
-        <h4 class="text-xl font-semibold text-blue-700">📥 Downloadables</h4>
-        <p class="mt-2 text-blue-600">Stickers, planning cards, breathing posters, family trackers.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="text-center py-12">
-    <h4 class="text-xl font-bold text-blue-800">Join Our Family Circle</h4>
-    <p class="text-blue-600 mt-2">Receive monthly bundles of joy for your family journey.</p>
-    <form action="https://formsubmit.co/hello@alvina.app" method="POST" class="mt-4">
-      <input type="email" name="email" placeholder="Your Email" required class="px-4 py-2 border rounded">
-      <button type="submit" class="ml-2 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Subscribe</button>
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_subject" value="New subscription from Alvina World">
-    </form>
-  </section>
-
-  <footer class="text-center py-6 text-blue-700">
-    <p>&copy; 2025 Alvina World – Nurturing Homes</p>
   </footer>
+
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
