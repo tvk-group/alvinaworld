@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preload" href="alvina-hero.png" as="image" />
 </head>
 <body>
   <div class="ambient-particles" aria-hidden="true"></div>
@@ -84,15 +85,43 @@
         <div class="hero-glow hero-glow--blue"></div>
         <div class="hero-wave"></div>
       </div>
-      <div class="container hero-content reveal">
-        <p class="eyebrow" data-i18n="hero.eyebrow">The human side of intelligent living</p>
-        <h1 class="hero-title" data-i18n="hero.title">ALVINA World</h1>
-        <p class="hero-subtitle" data-i18n="hero.subtitle">A Human-Centered AI Universe for Life, Growth, Wellbeing and Connection.</p>
-        <p class="hero-support" data-i18n="hero.support">ALVINA World brings together personal intelligence, wellbeing practices, emotional clarity, daily organization, learning, and meaningful human connection in one elegant digital experience.</p>
-        <div class="hero-actions">
-          <a href="#world" class="btn btn-primary" data-i18n="hero.btn.explore">Explore ALVINA</a>
-          <a href="#flow" class="btn btn-secondary" data-i18n="hero.btn.flow">Discover ALVINA Flow</a>
-          <a href="#contact" class="btn btn-ghost" data-i18n="hero.btn.join">Join the World</a>
+      <div class="container hero-grid">
+        <div class="hero-portrait reveal" id="hero-portrait">
+          <div class="hero-portrait-orbit" aria-hidden="true">
+            <span class="hero-orbit-ring hero-orbit-ring--1"></span>
+            <span class="hero-orbit-ring hero-orbit-ring--2"></span>
+            <span class="hero-orbit-ring hero-orbit-ring--3"></span>
+          </div>
+          <div class="hero-portrait-aura" aria-hidden="true"></div>
+          <div class="hero-portrait-frame">
+            <div class="hero-portrait-video">
+              <img
+                src="alvina-hero.png"
+                alt="ALVINA — your human-centered AI companion"
+                class="hero-portrait-img"
+                width="820"
+                height="864"
+                fetchpriority="high"
+              />
+              <div class="hero-portrait-shimmer" aria-hidden="true"></div>
+              <div class="hero-portrait-breathe" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="hero-portrait-badge">
+            <span class="hero-portrait-pulse" aria-hidden="true"></span>
+            <span data-i18n="hero.portrait.label">Meet ALVINA</span>
+          </div>
+        </div>
+        <div class="hero-content reveal">
+          <p class="eyebrow" data-i18n="hero.eyebrow">The human side of intelligent living</p>
+          <h1 class="hero-title" data-i18n="hero.title">ALVINA World</h1>
+          <p class="hero-subtitle" data-i18n="hero.subtitle">A Human-Centered AI Universe for Life, Growth, Wellbeing and Connection.</p>
+          <p class="hero-support" data-i18n="hero.support">ALVINA World brings together personal intelligence, wellbeing practices, emotional clarity, daily organization, learning, and meaningful human connection in one elegant digital experience.</p>
+          <div class="hero-actions">
+            <a href="#world" class="btn btn-primary" data-i18n="hero.btn.explore">Explore ALVINA</a>
+            <a href="#flow" class="btn btn-secondary" data-i18n="hero.btn.flow">Discover ALVINA Flow</a>
+            <a href="#contact" class="btn btn-ghost" data-i18n="hero.btn.join">Join the World</a>
+          </div>
         </div>
       </div>
       <div class="hero-scroll-hint" aria-hidden="true">

@@ -158,6 +158,26 @@
     if (yearEl) yearEl.textContent = new Date().getFullYear();
   }
 
+  function initHeroPortraitParallax() {
+    const portrait = document.getElementById('hero-portrait');
+    if (!portrait || window.matchMedia('(max-width: 899px)').matches) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const maxOffset = 10;
+    portrait.addEventListener('mousemove', function (e) {
+      const rect = portrait.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      portrait.style.setProperty('--parallax-x', (x * maxOffset) + 'px');
+      portrait.style.setProperty('--parallax-y', (y * maxOffset) + 'px');
+    });
+
+    portrait.addEventListener('mouseleave', function () {
+      portrait.style.setProperty('--parallax-x', '0px');
+      portrait.style.setProperty('--parallax-y', '0px');
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     initLanguage();
     initMobileNav();
@@ -165,5 +185,6 @@
     initHeaderScroll();
     initSmoothAnchors();
     initYear();
+    initHeroPortraitParallax();
   });
 })();
