@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alvina World – Family Wellness</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .hero-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+    .hero-container img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(51, 65, 85, 0.5);
+      color: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body class="bg-blue-50 font-sans text-gray-800">
+  <header class="bg-white shadow px-6 py-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-blue-800">Alvina World</h1>
+    <select onchange="location = this.value;" class="border text-sm text-blue-700 border-blue-300 px-2 py-1 rounded">
+      <option value="index.html">English</option>
+      <option value="lang/de.html">Deutsch</option>
+      <option value="lang/ru.html">Русский</option>
+    </select>
+  </header>
+
+  <section class="hero-container">
+    <img src="alvina-hero.png" alt="Alvina World Banner"/>
+    <div class="hero-text">
+      <h2 class="text-3xl md:text-5xl font-bold mb-4">A World of Calm for You and Your Child</h2>
+      <p class="text-lg mb-4">Gentle rituals, printable fun, and emotional connection through Alvina.</p>
+      <a href="#resources" class="bg-white text-blue-900 font-semibold px-6 py-2 rounded hover:bg-blue-100">Explore Family Tools</a>
+    </div>
+  </section>
+
+  <section id="resources" class="bg-blue-100 px-6 py-12 text-center">
+    <h3 class="text-2xl font-bold text-blue-900">Wellness Resources for All Ages</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+      <div class="bg-white p-6 rounded shadow text-left">
+        <h4 class="text-xl font-semibold text-blue-700">🧒 Children’s Yoga Corner</h4>
+        <p class="mt-2 text-blue-600">Simple poses, calming videos, printable games and songs.</p>
+      </div>
+      <div class="bg-white p-6 rounded shadow text-left">
+        <h4 class="text-xl font-semibold text-blue-700">💗 Parent Stories</h4>
+        <p class="mt-2 text-blue-600">Real journeys from mothers & fathers creating balance at home.</p>
+      </div>
+      <div class="bg-white p-6 rounded shadow text-left">
+        <h4 class="text-xl font-semibold text-blue-700">📥 Downloadables</h4>
+        <p class="mt-2 text-blue-600">Stickers, planning cards, breathing posters, family trackers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="text-center py-12">
+    <h4 class="text-xl font-bold text-blue-800">Join Our Family Circle</h4>
+    <p class="text-blue-600 mt-2">Receive monthly bundles of joy for your family journey.</p>
+    <form action="https://formsubmit.co/hello@alvina.app" method="POST" class="mt-4">
+      <input type="email" name="email" placeholder="Your Email" required class="px-4 py-2 border rounded">
+      <button type="submit" class="ml-2 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Subscribe</button>
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="New subscription from Alvina World">
+    </form>
+  </section>
+
+  <footer class="text-center py-6 text-blue-700">
+    <p>&copy; 2025 Alvina World – Nurturing Homes</p>
+  </footer>
+</body>
+</html>
