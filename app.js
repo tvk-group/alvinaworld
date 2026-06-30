@@ -178,6 +178,117 @@
     });
   }
 
+  function initPwa() {
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/sw.js').catch(function () {});
+      });
+    }
+
+    const modal = document.getElementById('pwa-install-modal');
+    const backdrop = document.getElementById('pwa-install-backdrop');
+    const confirmBtn = document.getElementById('pwa-install-confirm');
+    const cancelBtn = document.getElementById('pwa-install-cancel');
+    const banner = document.getElementById('pwa-install-banner');
+    const bannerBtn = document.getElementById('pwa-install-banner-btn');
+    const iosHint = document.getElementById('pwa-ios-hint');
+    const installSection = document.getElementById('app-install');
+    let deferredPrompt = null;
+
+    function isStandalone() {
+      return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+    }
+
+    function isIos() {
+      return /iphone|ipad|ipod/i.test(navigator.userAgent);
+    }
+
+    function isDismissed() {
+      try {
+        return sessionStorage.getItem('alvinaworld-pwa-dismissed') === '1';
+      } catch (e) {
+        return false;
+      }
+    }
+
+    function setDismissed() {
+      try {
+        sessionStorage.setItem('alvinaworld-pwa-dismissed', '1');
+      } catch (e) {}
+    }
+
+    function showIosHint() {
+      if (iosHint && isIos()) iosHint.hidden = false;
+    }
+
+    function showInstallModal() {
+      if (!modal || isStandalone() || isDismissed()) return;
+      showIosHint();
+      modal.hidden = false;
+      document.body.classList.add('pwa-modal-open');
+    }
+
+    function hideInstallModal(showBanner) {
+      if (!modal) return;
+      modal.hidden = true;
+      document.body.classList.remove('pwa-modal-open');
+      if (showBanner !== false) showInstallBanner();
+    }
+
+    function showInstallBanner() {
+      if (!banner || isStandalone() || isDismissed()) return;
+      banner.hidden = false;
+    }
+
+    function scrollToInstallGuide() {
+      hideInstallModal(false);
+      if (installSection) {
+        const offset = 80;
+        const top = installSection.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    }
+
+    function runNativeInstall() {
+      if (!deferredPrompt) {
+        scrollToInstallGuide();
+        return;
+      }
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then(function (choice) {
+        deferredPrompt = null;
+        hideInstallModal();
+        if (choice.outcome === 'dismissed') setDismissed();
+      });
+    }
+
+    window.addEventListener('beforeinstallprompt', function (e) {
+      e.preventDefault();
+      deferredPrompt = e;
+      if (!isDismissed() && !isStandalone()) showInstallModal();
+    });
+
+    if (confirmBtn) confirmBtn.addEventListener('click', runNativeInstall);
+    if (bannerBtn) bannerBtn.addEventListener('click', runNativeInstall);
+    if (cancelBtn) {
+      cancelBtn.addEventListener('click', function () {
+        setDismissed();
+        hideInstallModal();
+      });
+    }
+    if (backdrop) {
+      backdrop.addEventListener('click', function () {
+        setDismissed();
+        hideInstallModal();
+      });
+    }
+
+    if (!isStandalone() && !isDismissed()) {
+      showIosHint();
+      setTimeout(showInstallModal, 500);
+    }
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     initLanguage();
     initMobileNav();
@@ -186,5 +297,6 @@
     initSmoothAnchors();
     initYear();
     initHeroPortraitParallax();
+    initPwa();
   });
 })();

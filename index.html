@@ -4,7 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="ALVINA World — A human-centered AI universe for life, growth, wellbeing and connection." />
+  <meta name="theme-color" content="#D4A5A5" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="ALVINA World" />
   <title>ALVINA World — Human-Centered AI Universe</title>
+  <link rel="manifest" href="/assets/web-app-manifest.json" />
+  <link rel="icon" href="/assets/icons/favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -490,6 +497,31 @@
         </div>
       </div>
     </section>
+
+    <!-- App install -->
+    <section class="section section-app-install" id="app-install">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" data-i18n="pwa.label">ALVINA World App</span>
+          <h2 data-i18n="pwa.installTitle">Install ALVINA World</h2>
+          <p class="section-lead" data-i18n="pwa.installLead">Add ALVINA World to your home screen for one-tap access to your human-centered universe.</p>
+        </div>
+        <div class="install-grid reveal">
+          <div class="install-card" id="pwa-ios-hint" hidden>
+            <span class="install-platform">iPhone / iPad</span>
+            <p data-i18n="pwa.iosStep">Tap Share in Safari, then Add to Home Screen to install ALVINA World.</p>
+          </div>
+          <div class="install-card">
+            <span class="install-platform">Android</span>
+            <p data-i18n="pwa.androidStep">Chrome → alvinaworld.com → menu → Install app or Add to Home screen.</p>
+          </div>
+          <div class="install-card">
+            <span class="install-platform">Desktop</span>
+            <p data-i18n="pwa.desktopStep">Chrome or Edge → install icon in the address bar, or bookmark alvinaworld.com.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -507,6 +539,27 @@
       <p class="footer-copy">&copy; <span id="year"></span> ALVINA World</p>
     </div>
   </footer>
+
+  <div id="pwa-install-banner" hidden>
+    <p data-i18n="pwa.banner">Add ALVINA World to your home screen</p>
+    <button type="button" class="btn btn-primary btn-sm" id="pwa-install-banner-btn" data-i18n="pwa.install">Install App</button>
+  </div>
+
+  <div class="pwa-install-modal" id="pwa-install-modal" hidden role="dialog" aria-modal="true" aria-labelledby="pwa-install-title">
+    <div class="pwa-install-backdrop" id="pwa-install-backdrop"></div>
+    <div class="pwa-install-dialog">
+      <div class="pwa-install-photo-wrap">
+        <img class="pwa-install-photo" src="/alvina-hero.png" alt="ALVINA World" width="160" height="168" />
+      </div>
+      <span class="section-tag pwa-install-label" data-i18n="pwa.label">ALVINA World App</span>
+      <h2 class="pwa-install-title" id="pwa-install-title" data-i18n="pwa.title">Install ALVINA World</h2>
+      <p class="pwa-install-desc" data-i18n="pwa.desc">Add ALVINA World to your home screen — your human-centered universe, always within reach.</p>
+      <div class="pwa-install-dialog-actions">
+        <button type="button" class="btn btn-primary" id="pwa-install-confirm" data-i18n="pwa.install">Install App</button>
+        <button type="button" class="btn btn-secondary" id="pwa-install-cancel" data-i18n="pwa.later">Not now</button>
+      </div>
+    </div>
+  </div>
 
   <script src="i18n.js"></script>
   <script src="app.js"></script>

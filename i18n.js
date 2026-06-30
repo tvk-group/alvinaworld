@@ -59,7 +59,18 @@ const TRANSLATIONS = {
     "contact.lead": "Be among the first to experience ALVINA World. Share your email and we'll welcome you when the universe opens.",
     "contact.name": "Your name", "contact.email": "Your email", "contact.message": "Tell us what you're looking forward to...",
     "contact.submit": "Request Early Access",
-    "footer.tagline": "A human-centered AI universe for life, growth, wellbeing and connection."
+    "footer.tagline": "A human-centered AI universe for life, growth, wellbeing and connection.",
+    "pwa.label": "ALVINA World App",
+    "pwa.title": "Install ALVINA World",
+    "pwa.desc": "Add ALVINA World to your home screen — your human-centered universe, always within reach.",
+    "pwa.install": "Install App",
+    "pwa.later": "Not now",
+    "pwa.banner": "Add ALVINA World to your home screen",
+    "pwa.installTitle": "Install ALVINA World",
+    "pwa.installLead": "Add ALVINA World to your home screen for one-tap access to your human-centered universe.",
+    "pwa.iosStep": "Tap Share in Safari, then Add to Home Screen to install ALVINA World.",
+    "pwa.androidStep": "Chrome → alvinaworld.com → menu → Install app or Add to Home screen.",
+    "pwa.desktopStep": "Chrome or Edge → install icon in the address bar, or bookmark alvinaworld.com."
   },
   de: {
     "nav.world": "Die Welt", "nav.companion": "Begleiter", "nav.flow": "Flow", "nav.life": "Lebensbereiche",
@@ -120,7 +131,18 @@ const TRANSLATIONS = {
     "contact.lead": "Seien Sie unter den Ersten, die ALVINA World erleben. Teilen Sie Ihre E-Mail und wir heißen Sie willkommen.",
     "contact.name": "Ihr Name", "contact.email": "Ihre E-Mail", "contact.message": "Erzählen Sie uns, worauf Sie sich freuen...",
     "contact.submit": "Frühen Zugang anfordern",
-    "footer.tagline": "Ein menschenzentriertes KI-Universum für Leben, Wachstum, Wohlbefinden und Verbindung."
+    "footer.tagline": "Ein menschenzentriertes KI-Universum für Leben, Wachstum, Wohlbefinden und Verbindung.",
+    "pwa.label": "ALVINA World App",
+    "pwa.title": "ALVINA World installieren",
+    "pwa.desc": "Fügen Sie ALVINA World Ihrem Startbildschirm hinzu — Ihr menschenzentriertes Universum, immer griffbereit.",
+    "pwa.install": "App installieren",
+    "pwa.later": "Nicht jetzt",
+    "pwa.banner": "ALVINA World zum Startbildschirm hinzufügen",
+    "pwa.installTitle": "ALVINA World installieren",
+    "pwa.installLead": "Fügen Sie ALVINA World Ihrem Startbildschirm hinzu — für einfachen Zugang zu Ihrem menschenzentrierten Universum.",
+    "pwa.iosStep": "Tippen Sie in Safari auf Teilen, dann Auf Home-Bildschirm, um ALVINA World zu installieren.",
+    "pwa.androidStep": "Chrome → alvinaworld.com → Menü → App installieren oder Zum Startbildschirm hinzufügen.",
+    "pwa.desktopStep": "Chrome oder Edge → Installationssymbol in der Adressleiste, oder alvinaworld.com als Lesezeichen."
   },
   fr: {
     "nav.world": "Le Monde", "nav.companion": "Compagnon", "nav.flow": "Flow", "nav.life": "Domaines de vie",
@@ -181,7 +203,18 @@ const TRANSLATIONS = {
     "contact.name": "Votre nom", "contact.email": "Votre email", "contact.message": "Dites-nous ce qui vous attend avec impatience...",
     "contact.submit": "Demander un accès anticipé",
     "footer.tagline": "Un univers d'IA centré sur l'humain pour la vie, la croissance, le bien-être et la connexion.",
-    "lang.label": "Langue"
+    "lang.label": "Langue",
+    "pwa.label": "App ALVINA World",
+    "pwa.title": "Installer ALVINA World",
+    "pwa.desc": "Ajoutez ALVINA World à votre écran d'accueil — votre univers centré sur l'humain, toujours à portée de main.",
+    "pwa.install": "Installer l'app",
+    "pwa.later": "Pas maintenant",
+    "pwa.banner": "Ajouter ALVINA World à l'écran d'accueil",
+    "pwa.installTitle": "Installer ALVINA World",
+    "pwa.installLead": "Ajoutez ALVINA World à votre écran d'accueil pour un accès en un geste à votre univers centré sur l'humain.",
+    "pwa.iosStep": "Dans Safari, touchez Partager, puis Sur l'écran d'accueil pour installer ALVINA World.",
+    "pwa.androidStep": "Chrome → alvinaworld.com → menu → Installer l'application ou Ajouter à l'écran d'accueil.",
+    "pwa.desktopStep": "Chrome ou Edge → icône d'installation dans la barre d'adresse, ou ajoutez alvinaworld.com aux favoris."
   },
   es: {
     "nav.world": "El Mundo", "nav.companion": "Compañero", "nav.flow": "Flow", "nav.life": "Áreas de vida",
@@ -242,7 +275,18 @@ const TRANSLATIONS = {
     "contact.name": "Tu nombre", "contact.email": "Tu email", "contact.message": "Cuéntanos qué esperas con ilusión...",
     "contact.submit": "Solicitar acceso anticipado",
     "footer.tagline": "Un universo de IA centrado en el ser humano para la vida, el crecimiento, el bienestar y la conexión.",
-    "lang.label": "Idioma"
+    "lang.label": "Idioma",
+    "pwa.label": "App ALVINA World",
+    "pwa.title": "Instalar ALVINA World",
+    "pwa.desc": "Añade ALVINA World a tu pantalla de inicio — tu universo centrado en el ser humano, siempre a mano.",
+    "pwa.install": "Instalar app",
+    "pwa.later": "Ahora no",
+    "pwa.banner": "Añadir ALVINA World a la pantalla de inicio",
+    "pwa.installTitle": "Instalar ALVINA World",
+    "pwa.installLead": "Añade ALVINA World a tu pantalla de inicio para acceder con un toque a tu universo centrado en el ser humano.",
+    "pwa.iosStep": "En Safari, toca Compartir y luego Añadir a la pantalla de inicio para instalar ALVINA World.",
+    "pwa.androidStep": "Chrome → alvinaworld.com → menú → Instalar aplicación o Añadir a la pantalla de inicio.",
+    "pwa.desktopStep": "Chrome o Edge → icono de instalación en la barra de direcciones, o guarda alvinaworld.com en favoritos."
   }
 };
 
