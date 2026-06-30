@@ -32,6 +32,13 @@ Open `http://localhost:8080`
 - `styles.css` — Premium wellness design system and animations
 - `app.js` — Interactions, scroll reveals, mobile navigation
 - `i18n.js` — 25-language translation support
+- `assets/web-app-manifest.json` — PWA manifest
+- `assets/icons/` — PWA and favicon icons
+- `sw.js` — Service worker for offline caching and installability
+
+## PWA Install
+
+The site is installable as a Progressive Web App. When visitors open the website, an install prompt appears automatically (like eKRON / EnteleLEDGER). They can add ALVINA World to their home screen on iPhone, Android, or desktop.
 
 ## Deployment
 
